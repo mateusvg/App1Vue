@@ -60,6 +60,7 @@
                 <span class="coment_autor"
                   >Nome: {{ ArrayIteracao.nome }}
                   <p>Comentário:{{ ArrayIteracao.msm }}</p>
+                  <p>Horário: {{ ArrayIteracao.tempo }}</p>
                 </span>
                 <div>
                   <!--Adiciona o index como parametros para saber a posição de iteração-->
@@ -104,6 +105,8 @@ export default {
         this.comentarios.push({
           nome: this.nome,
           msm: this.msm,
+          //para adicionar um horario fixo no momento do comentário
+          tempo: this.time,
         });
 
       // adiciona o limpar no nome e no comentario apos enviar.
@@ -121,6 +124,7 @@ export default {
       this.comentarios.push({
         nome: this.nome,
         msm: this.msm,
+        tempo: this.time
       });
       (this.nome = ""), (this.msm = "");
     },
